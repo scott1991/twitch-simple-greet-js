@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<meta charset="UTF-8">
+	<script src="tmi.min.js"></script>
+	<script src="main.js"></script>
+	<style>
+	html, body {
+	  color: #dcdcdc;
+	  background-color: #292929;
+	}
+	</style>
+<body>
+<form name="authinfo">
+	<label style="font-size:large">username	 <input style="width:300px;height:20px" id="username" required> </label>
+	<br/>
+	<label style="font-size:large">oauth	 <input style="width:300px;height:20px" id="oauth" required> </label>
+		<p>
+		<a href="get_oauth.html" style="color:light-blue">What is Oauth?</a>
+	</p>
+
+	<br/>
+	<label style="font-size:large">channels	
+		<input style="width:300px;height:20px" id="channels" placeholder="twitch, twitchdev, twitchrivals" required> 
+	</label>
+	
+</form>
+	<button id="startbot" type="button" onclick="startbot()" style="width:80px;font-size:large" >START</button>
+	<button id="stopbot" type="button" onclick="stopbot()" style="width:80px;font-size:large" >STOP</button>
+
+	<div style="width:80px;font-size:large">LOG:</div>
+	<pre id="log" style="height:70vh;overflow-x: scroll;"></pre>
+
+</body>
+</html>
