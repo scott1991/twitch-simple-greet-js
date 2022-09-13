@@ -12,6 +12,9 @@ window.addEventListener('load', function() {
             }
         }
     })();
+	
+	document.getElementById('stopbot').disabled = true ;
+	document.getElementById('startbot').disabled = false ;
 
 })
 window.startbot = startbot;
@@ -21,7 +24,9 @@ let client ;
 let channels
 
 function startbot() {
-	console.log("startbot")
+	console.log("startbot");
+	document.getElementById('stopbot').disabled = false ;
+	document.getElementById('startbot').disabled = true ;
     const inputObj = prepareInputs();
 	if ( !inputObj || !inputObj.username || !inputObj.oauth || !inputObj.channels) {
 		alert("Please enter all fields!");
@@ -70,9 +75,13 @@ function stopbot(){
 	.then((data) => {
 		console.log(data);
 		delete client ;
+		document.getElementById('stopbot').disabled = true ;
+		document.getElementById('startbot').disabled = false ;
 	}).catch((err) => {
 		console.error(err);
 	});
+	
+	
 }
 
 function prepareInputs() {
