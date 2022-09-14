@@ -35,7 +35,8 @@ function startbot() {
     channels = inputObj.channels;
     client = new tmi.Client({
         options: {
-            debug: true
+            debug: true,
+			skipUpdatingEmotesets: true
         },
         identity: {
             username: inputObj.username,
@@ -55,7 +56,7 @@ function startbot() {
         // Ignore echoed messages.
         if (self) return;
 
-        if (message.indexOf('Hi') != -1) {
+        if (message.includes('Hi')) {
             if (AnMap[channel.substring(1)][tags.username] == 1) {
                 client.say(channel, `@${tags['display-name']} Greeted! :( `);
                 AnMap[channel.substring(1)][tags.username]++;
