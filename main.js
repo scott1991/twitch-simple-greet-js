@@ -51,7 +51,7 @@ function startbot() {
         AnMap[userName.substring(1)] = {};
     });
 
-    client.on('message', (channel, tags, message, self) => {
+    client.on('chat', (channel, tags, message, self) => {
         // Ignore echoed messages.
         if (self) return;
 
