@@ -13,7 +13,10 @@ Download the project by "Code => Download ZIP"
 
 ## Links
 [tmijs](https://tmijs.com/)
+
 [tmijs Documents](https://github.com/tmijs/docs/tree/gh-pages/_posts/v1.4.2)
+
 [Getting OAuth Access Tokens](https://dev.twitch.tv/docs/authentication/getting-tokens-oauth)
+
 [Twitch Chat OAuth Password Generator](https://twitchapps.com/tmi/)
 
